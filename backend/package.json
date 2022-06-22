@@ -1,0 +1,22 @@
+{
+  "name": "frontend-challenge",
+  "version": "1.0.0",
+  "description": "Trends are essential part of REFRESHER's content. Bounded within the application they are our blog content. Therefore, we rely on their good quality, free availability and search engine optimization to engage more people.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/refresher-trends/frontend-challenge.git"
+  },
+  "author": "Matheus Ferreira",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/refresher-trends/frontend-challenge/issues"
+  },
+  "homepage": "https://github.com/refresher-trends/frontend-challenge#readme",
+  "dependencies": {
+    "json-server": "^0.16.3"
+  }
+}
