@@ -72,8 +72,9 @@ const App = () => {
 
   return (
     <>
-      <Header opacity={opacity} media={isLargerThan550}/>
-      <Contents data={state} post={post} media={isLargerThan550}/>
+
+      <Header opacity={opacity} media={isLargerThan550} />
+      <Contents data={state} post={post} media={isLargerThan550} />
       {/* <RelatedContents data={state} post={post} />; */}
       <Box h={'300px'} />
 

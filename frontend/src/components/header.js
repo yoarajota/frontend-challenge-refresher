@@ -52,13 +52,21 @@ export default function Header(props) {
 
     return (
         <>
-            <Box backgroundColor={`rgba(255, 221, 0, ${props.opacity})`} borderBottom={"1px solid rgba(0, 0, 0, 0.3)"} h={props.media ? "90px" : (shrink ? "70px" : "130px")} p={"12px 0"} textAlign={'center'} justifyContent={'center'} verticalAlign={"middle"} position={"fixed"} w={'100%'} transition={'0.6s'} zIndex={'5'}>
+            <Box
+                backgroundColor={`rgba(255, 221, 0, ${props.opacity})`}
+                background={props.opacity < 1 ? 'linear-gradient(180deg, rgba(255,221,0,1) 0%, rgba(255,221,0,0) 100%)' : ''}
+                borderBottom={props.opacity < 1 ? '' : "1px solid rgba(0, 0, 0, 0.3)"}
+                position={"fixed"}
+                top={'0'}
+                left={'0'}
+                h={props.media ? "90px" : (shrink ? "70px" : "130px")} p={"12px 0"} textAlign={'center'} justifyContent={'center'}
+                w={'100%'} transition={'0.6s'} zIndex={'5'}>
                 <Image minH={'28px'} maxH={'35px'} height={"8vw"} m={"auto"} src={Logo} />
                 <Breadcumb display={display} />
 
                 {!props.media && <Center display={shrink ? "none" : "flex"}>
-                        <Menu type={2}/>
-                        <Register type={2}/>
+                    <Menu type={2} />
+                    <Register type={2} />
                 </Center>
                 }
 
@@ -68,7 +76,7 @@ export default function Header(props) {
                 {props.media && <Menu display={display}></Menu>
                 }
 
-            </Box> 
+            </Box>
         </>
     )
 }
